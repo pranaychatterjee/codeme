@@ -30,7 +30,7 @@ int main()
 	cout<<"\nEnter the data=";
 	cin>>input;
     	stack<int> stack; // stack has been created
-	stack.push('N'); //to chech the end point of the stack
+	stack.push('Z'); //to chech the end point of the stack
 	int len=input.length(); //getting the length of the input value
 	string put_value;
 	for(int i=0;i<len;i++)
@@ -46,7 +46,7 @@ int main()
 	else if (input[i]==')') //check for closing brackets
 {
 	stack.push(')');
-	while(stack.top()!='N' && stack.top()!='(') // loop for checking end of the stack and any opening brackets
+	while(stack.top()!='Z' && stack.top()!='(') // loop for checking end of the stack and any opening brackets
 {
 	
 	ch=stack.top(); //getting the top value and store it into another charachter
@@ -62,7 +62,7 @@ if(stack.top()=='(')
 
 else
 {
-	while(stack.top()!='N' && get_value(input[i])<= get_value(stack.top()))
+	while(stack.top()!='Z' && get_value(input[i])<= get_value(stack.top()))
 {
 	ch=stack.top();
 	stack.pop();
@@ -74,7 +74,7 @@ else
 
 
 
-	while(stack.top()!='N')// loop is used to poping the value as required 
+	while(stack.top()!='Z')// loop is used to poping the value as required 
 {
 	ch=stack.top();
 	stack.pop();
